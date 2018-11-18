@@ -18,7 +18,9 @@
     "url": "https://github.com/plbang/FriendFinder/issues"
   },
   "homepage": "https://github.com/plbang/FriendFinder#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.4"
+  },
   "devDependencies": {},
   "description": ""
 }
