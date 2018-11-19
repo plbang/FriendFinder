@@ -15,6 +15,5 @@ User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
 
 Total Difference: 2 + 1 + 2 = 5
 
-## Languages
 
 #### Express, Node.js, JavaScript, HTML, CSS
