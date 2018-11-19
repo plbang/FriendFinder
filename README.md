@@ -16,4 +16,7 @@ User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
 Total Difference: 2 + 1 + 2 = 5
 
 
+[Launch the App](https://friends-dump.herokuapp.com/)
+
+
 #### Express, Node.js, JavaScript, HTML, CSS
