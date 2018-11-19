@@ -1,7 +1,7 @@
 // DEPENDENCIES
 var express = require("express");
 var path = require("path");
-var friends = require("./app/data/friends");
+
 
 // EXPRESS CONFIGURATION
 var app = express();
@@ -11,17 +11,9 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// A GET route with the URL /api/friends to display JSON of possible friends
-app.get("/api/friends", function(req, res) {
-  res.json(friends);
-});
 
-// A POST route to /api/friends to handle incoming survey results
-app.post("/api/friends", function(req,res) {
-  console.log(req.body);
-})
-
-// require("./app/routing/apiRoutes");
+// Passes in the app on line 7 into the funtion
+require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 
