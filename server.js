@@ -1,6 +1,7 @@
 // DEPENDENCIES
 var express = require("express");
 var path = require("path");
+var friends = require("./app/data/friends");
 
 // EXPRESS CONFIGURATION
 var app = express();
@@ -13,6 +14,11 @@ app.use(express.json());
 // require("./app/routing/apiRoutes");
 require("./app/routing/htmlRoutes")(app);
 
+
+// A GET route with the URL /api/friends to display JSON of possible friends
+app.get("/api/friends", function(req, res) {
+  res.json(friends);
+});
 
 
 // LISTENER
