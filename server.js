@@ -7,18 +7,24 @@ var friends = require("./app/data/friends");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
+// Middleware: sets up the Express app to handle data parsing. Allows for formatted JSON data.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// require("./app/routing/apiRoutes");
-require("./app/routing/htmlRoutes")(app);
-
 
 // A GET route with the URL /api/friends to display JSON of possible friends
 app.get("/api/friends", function(req, res) {
   res.json(friends);
 });
+
+// A POST route to /api/friends to handle incoming survey results
+app.post("/api/friends", function(req,res) {
+  console.log(req.body);
+})
+
+// require("./app/routing/apiRoutes");
+require("./app/routing/htmlRoutes")(app);
+
+
 
 
 // LISTENER
